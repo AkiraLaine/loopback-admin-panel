@@ -11,7 +11,7 @@
 
 <template>
   <aside>
-    sidebar
+    <h1 class="logo">Loopback Admin Panel</h1>
   </aside>
 </template>
 
