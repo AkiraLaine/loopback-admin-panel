@@ -5,7 +5,7 @@ import Router from 'vue-router'
 import App from './App'
 import routes from './routes'
 
-import 'normalize.css'
+import './reset.css'
 
 Vue.use(Resource)
 Vue.use(Router)
