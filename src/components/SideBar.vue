@@ -3,10 +3,23 @@
     color: white;
     background-color: rgb(34, 39, 50);
     height: 100%;
+    overflow-y: auto;
     position: fixed;
     width: 300px;
     z-index: 10;
   }
+
+  aside::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: transparent;
+  }
+
+  aside::-webkit-scrollbar {
+    width: 6px;
+    background-color: transparent;
+  }
+
+  aside::-webkit-scrollbar-thumb { background-color: rgb(248, 57, 126); }
 
   li {
     cursor: pointer;

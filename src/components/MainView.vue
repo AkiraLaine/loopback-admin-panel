@@ -66,11 +66,11 @@
         </thead>
         <tbody>
           <tr v-for='user in data'>
-            <td><input value='{{user.username}}' /></td>
-            <td><input value='{{user.fullName}}' /></td>
-            <td><input value='{{user.age}}' /></td>
-            <td><input value='{{user.role}}' /></td>
-            <td><input value='{{user.birthday}}' /></td>
+            <td><input v-model="user.username" /></td>
+            <td><input v-model="user.fullName" /></td>
+            <td><input v-model="user.age" /></td>
+            <td><input v-model="user.role" /></td>
+            <td><input v-model="user.birthday" /></td>
           </tr>
         </tbody>
       </table>
