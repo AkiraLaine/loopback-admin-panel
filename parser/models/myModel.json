@@ -1,0 +1,51 @@
+{
+  "name": "OpenDonation",
+  "plural": "open-donations",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "filename": {
+      "type": "object"
+    },
+    "username": {
+      "type": "string",
+      "default": "Anonymous"
+    },
+    "amount": {
+      "type": "number",
+      "required": true
+    },
+    "message": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "make"
+    }
+  ],
+  "methods": {},
+  "adminPanel": {
+    "name": "Open Donations",
+    "entry": {
+      "General Information": ["username", "amount", "message"],
+      "Filename": ["filename"]
+    },
+    "filters": []
+  }
+}
