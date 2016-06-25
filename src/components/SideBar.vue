@@ -14,6 +14,10 @@
     transition: all 100ms ease-in-out;
   }
 
+  li.active {
+    background-color: rgb(248, 57, 126);
+  }
+
   li span {
     color: rgb(114, 119, 130);
     display: inline-block;
@@ -30,16 +34,18 @@
     transition: all 280ms cubic-bezier(0.4, 0, 0.36, 0.85);
   }
 
-  li:hover {
+  li:hover:not(.active) {
     background-color: rgb(56, 61, 72);
   }
 
-  li:hover .material-icons {
+  li:hover .material-icons,
+  li.active .material-icons {
     margin-right: 16px;
     transform: rotate(0deg);
   }
 
-  li:hover span { color: white; }
+  li:hover span,
+  li.active span { color: white; }
 
   .logo {
     font-size: 18px;
@@ -51,7 +57,7 @@
   <aside>
     <p class="logo">Loopback Admin Panel</p>
     <ul>
-      <li>
+      <li class="active">
         <span>Open Donations</span>
         <i class="material-icons">add</i>
       </li>
