@@ -81,5 +81,9 @@ module.exports = {
   },
   vue: {
     loaders: utils.cssLoaders()
+  },
+  devServer: {
+    historyApiFallback: true,
+    noInfo: true
   }
 }

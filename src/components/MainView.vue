@@ -3,11 +3,15 @@
 </style>
 
 <template>
-  <router-view></router-view>
+hello world
 </template>
 
 <script>
   export default {
+    data () {
+      return {
 
+      }
+    }
   }
 </script>
