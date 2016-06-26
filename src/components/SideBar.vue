@@ -3,8 +3,10 @@
     color: white;
     background-color: rgb(34, 39, 50);
     height: 100%;
+    left: 0;
     overflow-y: auto;
     position: fixed;
+    top: 0;
     width: 300px;
     z-index: 10;
   }

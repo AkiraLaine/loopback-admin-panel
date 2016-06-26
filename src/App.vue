@@ -1,5 +1,5 @@
 <style>
-  @import 'https://fonts.googleapis.com/css?family=Roboto:300,400|Material+Icons';
+  @import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons';
 
   body { font-family: 'Roboto', sans-serif; }
 
