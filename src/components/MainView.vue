@@ -1,9 +1,4 @@
 <style scoped>
-  * {
-    margin: 0 ;
-    padding: 0;
-    font-weight: 300;
-  }
   .container {
     width: 100%
   }
@@ -65,7 +60,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for='user in data'>
+          <tr v-for="user in data">
             <td><input v-model="user.username" /></td>
             <td><input v-model="user.fullName" /></td>
             <td><input v-model="user.age" /></td>

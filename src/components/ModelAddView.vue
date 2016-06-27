@@ -22,41 +22,6 @@
   .container .title {
     font-size: 24px;
   }
-
-  .input {
-    margin-top: 8px;
-  }
-
-  .input input:not([type="checkbox"]),
-  .input textarea {
-    border: 1px solid rgba(0, 0, 0, .2);
-    border-radius: 2px;
-    font-weight: 300;
-    max-width: 320px;
-    outline: none;
-    padding: 12px;
-    width: 320px;
-  }
-
-  .input input:not([type="checkbox"]):focus,
-  .input textarea:focus {
-    border-color: rgb(0, 133, 255);
-  }
-
-  .input label:not(.checkbox-text) {
-    display: block;
-    font-size: 12px;
-    font-weight: 500;
-    margin-bottom: 4px;
-    margin-top: 12px;
-    text-transform: uppercase;
-  }
-
-  .input input[type="checkbox"] { vertical-align: baseline; }
-
-  .input .checkbox-text {
-
-  }
 </style>
 
 <template>

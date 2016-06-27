@@ -60,7 +60,10 @@
   }
 
   li:hover span,
-  li.active span { color: white; }
+  li.active span {
+    color: white;
+    font-weight: 500;
+  }
 
   .logo {
     font-size: 18px;

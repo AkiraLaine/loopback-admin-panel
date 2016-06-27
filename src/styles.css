@@ -1,0 +1,67 @@
+.input {
+  margin-top: 8px;
+}
+
+.input input:not([type="checkbox"]),
+.input textarea {
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: 2px;
+  font-weight: 300;
+  max-width: 320px;
+  outline: none;
+  padding: 12px;
+  width: 320px;
+}
+
+.input input:not([type="checkbox"]):focus,
+.input textarea:focus {
+  border-color: rgba(0, 133, 255, .65) !important;
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.24) !important;
+}
+
+.input label:not(.checkbox-text) {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  margin-top: 12px;
+  text-transform: uppercase;
+}
+
+.input input[type="checkbox"] { vertical-align: baseline; }
+
+.input input:not([type="checkbox"]):hover,
+.input textarea:hover {
+  border-color: rgba(0, 133, 255, .5);
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.12);
+}
+
+.input button {
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: 500;
+  outline: none;
+  margin-top: 14px;
+  padding: 12px 16px;
+  text-transform: uppercase;
+}
+
+.input button.primary {
+  background-color: rgb(248, 57, 126);
+  color: white;
+}
+
+.notif {
+  background-color: rgb(248, 57, 126);
+  border-radius: 3px;
+  color: white;
+  margin: 20px 20px 0;
+  padding: 16px;
+}
+
+.notif .close {
+  cursor: pointer;
+  float: right;
+  margin-top: -2px;
+}

@@ -6,6 +6,7 @@ import App from './App'
 import routes from './routes'
 
 import './reset.css'
+import './styles.css'
 
 Vue.prototype.$user = {}
 

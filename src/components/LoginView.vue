@@ -23,37 +23,6 @@
     padding: 0 20px 20px;
   }
 
-  .input input:not([type="checkbox"]),
-  .input textarea {
-    border: 1px solid rgba(0, 0, 0, .2);
-    border-radius: 2px;
-    font-weight: 300;
-    max-width: 320px;
-    outline: none;
-    padding: 12px;
-    width: 320px;
-  }
-
-  .input input:not([type="checkbox"]):hover {
-    border-color: rgba(0, 0, 0, .25);
-  }
-
-  .input input:not([type="checkbox"]):focus,
-  .input textarea:focus {
-    border-color: rgb(0, 133, 255);
-  }
-
-  .input label:not(.checkbox-text) {
-    display: block;
-    font-size: 12px;
-    font-weight: 500;
-    margin-bottom: 4px;
-    margin-top: 12px;
-    text-transform: uppercase;
-  }
-
-  .input input[type="checkbox"] { vertical-align: baseline; }
-
   p { padding: 20px; }
 
   p.title {
@@ -65,36 +34,6 @@
   p.subtitle {
     font-size: 16px;
     padding-bottom: 0;
-  }
-
-  .input button {
-    border: 1px solid rgba(0, 0, 0, .2);
-    border-radius: 2px;
-    font-size: 14px;
-    font-weight: 500;
-    outline: none;
-    margin-top: 14px;
-    padding: 12px 16px;
-    text-transform: uppercase;
-  }
-
-  .input button.primary {
-    background-color: rgb(248, 57, 126);
-    color: white;
-  }
-
-  .notif {
-    background-color: rgb(248, 57, 126);
-    border-radius: 3px;
-    color: white;
-    margin: 20px 20px 0;
-    padding: 16px;
-  }
-
-  .notif .close {
-    cursor: pointer;
-    float: right;
-    margin-top: -2px;
   }
 </style>
 
