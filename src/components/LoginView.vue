@@ -82,19 +82,37 @@
     background-color: rgb(248, 57, 126);
     color: white;
   }
+
+  .notif {
+    background-color: rgb(248, 57, 126);
+    border-radius: 3px;
+    color: white;
+    margin: 20px 20px 0;
+    padding: 16px;
+  }
+
+  .notif .close {
+    cursor: pointer;
+    float: right;
+    margin-top: -2px;
+  }
 </style>
 
 <template>
   <div class="bg"></div>
   <div class="login">
     <p class="title">Loopback Admin Panel</p>
+    <div class="notif" v-for="err in errs">
+      {{ err }}
+      <i class="material-icons close" @click="removeErr(err)">close</i>
+    </div>
     <p class="subtitle">Login</p>
     <div class="input">
       <label for="Email">Email</label>
-      <input id="Email" type="text" placeholder="youremail@host.com">
+      <input id="Email" type="email" v-model="email" placeholder="youremail@host.com" @keyup.enter="login">
       <label for="Password">Password</label>
-      <input id="Password" type="password" placeholder="●●●●●●●●">
-      <button class="primary">Login</button>
+      <input id="Password" type="password" v-model="password" placeholder="●●●●●●●●" @keyup.enter="login">
+      <button class="primary" @click="login">Login</button>
     </div>
   </div>
 </template>
@@ -103,7 +121,37 @@
   export default {
     data () {
       return {
+        password: '',
+        email: '',
+        errs: []
+      }
+    },
+    methods: {
+      isValid () {
+        if (this.email === '') {
+          this.errs.push('Email cannot be blank.')
+          return false
+        }
 
+        if (this.password === '') {
+          this.errs.push('Password cannot be blank.')
+          return false
+        }
+
+        return true
+      },
+      error () {
+        this.errs.push('Email/Password is incorrect.')
+      },
+      login () {
+        if (this.isValid()) this.success({})
+      },
+      removeErr (err) {
+        this.errs.$remove(err)
+      },
+      success (user) {
+        this.$user = user
+        this.$router.go({ path: '/' })
       }
     }
   }

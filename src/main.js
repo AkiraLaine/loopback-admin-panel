@@ -7,6 +7,8 @@ import routes from './routes'
 
 import './reset.css'
 
+Vue.prototype.$user = {}
+
 Vue.use(Resource)
 Vue.use(Router)
 
