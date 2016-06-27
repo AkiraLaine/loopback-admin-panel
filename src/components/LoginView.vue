@@ -144,6 +144,7 @@
         this.errs.push('Email/Password is incorrect.')
       },
       login () {
+        this.errs.length = 0
         if (this.isValid()) this.success({})
       },
       removeErr (err) {
