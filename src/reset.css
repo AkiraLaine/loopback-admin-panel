@@ -20,6 +20,7 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
+  -webkit-font-smoothing: antialiased;
 }
 
 img,

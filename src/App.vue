@@ -1,6 +1,12 @@
 <style>
   @import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500|Material+Icons';
 
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+  }
+
   body { font-family: 'Roboto', sans-serif; }
 
   .main-container {
@@ -10,8 +16,8 @@
 </style>
 
 <template>
-  <side-bar></side-bar>
-  <div class="main-container">
+  <side-bar v-if="$route.path !== '/login'"></side-bar>
+  <div :class="{ 'main-container': $route.path !== '/login' }">
     <router-view></router-view>
   </div>
 </template>
