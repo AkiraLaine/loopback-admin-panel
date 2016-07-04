@@ -7,6 +7,8 @@ import routes from './routes'
 
 import './reset.css'
 import './styles.css'
+import 'grande-module/dist/css/grande-module.css'
+import 'grande-module/dist/css/grande-module-.css'
 
 Vue.prototype.$user = {}
 

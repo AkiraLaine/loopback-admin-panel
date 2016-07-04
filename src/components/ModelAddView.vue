@@ -58,11 +58,18 @@
         <input :id="$key" type="time">
         <input :id="$key" type="date">
       </template>
+
+      <template v-if="field.type === 'string-rich'">
+        <label :for="$key">{{ $key }}</label>
+        <article :id="$key" contenteditable></article>
+      </template>
     </div>
   </section>
 </template>
 
 <script>
+  import grande from 'grande-module'
+
   export default {
     data () {
       return {
@@ -80,6 +87,10 @@
               type: 'string-text-area',
               default: 'Donation Message'
             },
+            'Rich': {
+              type: 'string-rich',
+              default: 'Donation Message'
+            },
             'Created On': {
               type: 'date',
               default: ''
@@ -91,6 +102,13 @@
           }
         }
       }
+    },
+    ready () {
+      Object.keys(this.entry['General Information']).forEach(k => {
+        if (this.entry['General Information'][k].type === 'string-rich') {
+          grande.bind(document.getElementById(k))
+        }
+      })
     }
   }
 </script>
